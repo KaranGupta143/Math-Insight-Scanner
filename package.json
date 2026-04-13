@@ -10,8 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
-    "postinstall": "chmod +x node_modules/.bin/vite"
+    "test:watch": "vitest",
+    "postinstall": "node -e \"if (process.platform !== 'win32') require('child_process').execSync('chmod +x node_modules/.bin/vite')\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
